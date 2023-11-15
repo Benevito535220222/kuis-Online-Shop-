@@ -25,27 +25,27 @@ class ShopScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3, // Number of tabs
+      length: 3, 
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Shop'),
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
-              Navigator.of(context).pop(); // Navigate back
+              Navigator.of(context).pop(); 
             },
           ),
           actions: [
             IconButton(
               icon: const Icon(Icons.search),
               onPressed: () {
-                // Add your search functionality here
+                
               },
             ),
             IconButton(
               icon: const Icon(Icons.shopping_cart),
               onPressed: () {
-                // Add your cart functionality here
+                
               },
             ),
           ],
@@ -75,9 +75,9 @@ class ShopScreen extends StatelessWidget {
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 8.0,
-                  mainAxisSpacing: 60.0, // Adjust the spacing between rows
+                  mainAxisSpacing: 60.0, 
                 ),
-                itemCount: 4, // Number of items/cards
+                itemCount: 4, 
                 itemBuilder: (BuildContext context, int index) {
                   return ProductCard('Product ${index + 1}', 'assets/product${index + 1}.jpg');
                 },
@@ -100,7 +100,7 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 250.0, // Set a fixed height for each card
+      height: 250.0, 
       child: Card(
         margin: const EdgeInsets.all(8.0),
         child: Column(
@@ -122,7 +122,7 @@ class ProductCard extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                // Add your functionality for the "+ Keranjang" button here
+                
               },
               child: const Text('+ Keranjang'),
             ),
